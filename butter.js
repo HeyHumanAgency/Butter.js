@@ -1,3 +1,7 @@
+/*!
+ * Butter.js - A simple way to submit form data over AJAX with minimal changes to markup and backend code.
+ * Copyright (c) 2014 HeyHuman; GPLv3 Licensed.
+ */
 jQuery.fn.butter = function(settings) {
 
 	var _form = this;
