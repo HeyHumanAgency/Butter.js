@@ -1,6 +1,6 @@
 {
   "name": "butter",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A simple way to submit form data over AJAX with minimal changes to markup and backend code.",
   "main": "butter.js",
   "directories": {
