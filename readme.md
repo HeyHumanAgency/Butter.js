@@ -2,11 +2,47 @@
 
 A simple way to submit form data over AJAX with minimal changes to markup and backend code.
 
-## Example
+## Examples
 
-	$('form').butter();
+### Basic
 
-That's all.
+```js
+$('form').butter({
+	onDone: function(data) {
+		$('form').hide();
+		$('#success').show();
+	}
+});
+```
+### Advanced
+
+```js
+// Grab the form element
+var $form = $('form');
+
+// Initialise Butter
+$form.butter();
+
+// Event handlers
+$form
+	.on('butterSubmit', function(){
+		// Something to indicate the form has been submitted
+		myLoadingIndicator('show');
+	})
+	.on('butterComplete', function(){
+		// Remove any load indicators, etc.
+		myLoadingIndicator('hide');
+	})
+	.on('butterFail', function(err){
+		// Handle any server side error messages
+		displayMyFormErrors(err.msg);
+	})
+	.on('butterDone', function(success){
+		// Hide the form and display a success message
+		$form.hide();
+		$('#success').text(success.msg).show();
+	});
+```
 
 ## Options
 
