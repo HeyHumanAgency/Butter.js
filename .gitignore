@@ -48,6 +48,7 @@ dwsync.xml
 intermediate
 publish
 .idea
+vendor
 
 # build script local files
 build/buildinfo.properties
@@ -60,3 +61,5 @@ npm-debug.log
 # SourceMaps
 *.css.map
 
+# Project files
+/*.min.js

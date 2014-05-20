@@ -1,0 +1,28 @@
+{
+  "name": "butter",
+  "main": "butter.js",
+  "version": "0.1.0",
+  "authors": [
+    "Jono Warren <jonathan.warren@heyhuman.com>"
+  ],
+  "description": "A simple way to submit form data over AJAX with minimal changes to markup and backend code.",
+  "keywords": [
+    "ajax",
+    "form"
+  ],
+  "license": "GPLv3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10.0"
+  },
+  "devDependencies": {
+    "qunit": "~1.13.0"
+  }
+}

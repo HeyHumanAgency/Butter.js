@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Butter.js Tests</title>
+
+	<link rel="stylesheet" href="../vendor/qunit/qunit/qunit.css">
+	<script>
+		(function() {
+			// Default to the local version.
+			var path = '../vendor/jquery/jquery.js';
+			// Get any jquery=___ param from the query string.
+			var jqversion = location.search.match(/[?&]jquery=(.*?)(?=&|$)/);
+			// If a version was specified, use that version from code.jquery.com.
+			if (jqversion) {
+				path = '//code.jquery.com/jquery-' + jqversion[1] + '.js';
+			}
+			// This is the only time I'll ever use document.write, I promise!
+			document.write('<script src="' + path + '"><\/script>');
+		}());
+
+	</script>
+</head>
+<body>
+
+	<div id="qunit-fixture">
+		<form action="success" method="get" id="success"></form>
+		<form action="fail" method="get" id="fail"></form>
+	</div>
+	<div id="qunit"></div>
+
+	<script src="../vendor/qunit/qunit/qunit.js"></script>
+	<script src="tests.js"></script>
+</body>
+</html>

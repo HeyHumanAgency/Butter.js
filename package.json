@@ -1,0 +1,31 @@
+{
+  "name": "butter",
+  "version": "0.1.0",
+  "description": "A simple way to submit form data over AJAX with minimal changes to markup and backend code.",
+  "main": "butter.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-qunit": "~0.4.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-uglify": "~0.3.1",
+    "grunt-contrib-connect": "~0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HeyHumanoid/Butter.js.git"
+  },
+  "keywords": [
+    "ajax",
+    "jquery"
+  ],
+  "author": "HeyHuman",
+  "license": "GPLv3"
+}
