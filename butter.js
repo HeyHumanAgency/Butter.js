@@ -6,7 +6,13 @@ jQuery.fn.butter = function(settings) {
 
 	var _form = this;
 
+	var support = function (  ) {
+		return typeof window.FormData === 'function';
+	};
+
 	this.on('submit', function(e) {
+		if ( !support() ) { return; }
+
 		e.preventDefault();
 
 		if ( typeof jQuery.fn.parsley === 'function' ) {
@@ -41,17 +47,19 @@ jQuery.fn.butter = function(settings) {
 
 		module.submit = function() {
 
-			var data = _form.serializeArray();
+			var data = new FormData( _form.get( 0 ) );
 
-			data.push(options.params);
+			data.append(options.params.name, options.params.value);
 
 			_form.trigger('butterSubmit', data);
 
 			jQuery.ajax({
-				url: options.endpoint,
-				type: options.method,
-				data: data,
-				dataType: options.responseType
+				url         : options.endpoint,
+				type        : options.method,
+				data        : data,
+				dataType    : options.responseType,
+				contentType : false,
+				processData : false
 
 			}).done(function(data) {
 
