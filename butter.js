@@ -7,7 +7,7 @@ jQuery.fn.butter = function(settings) {
 	var _form = this;
 
 	var support = function (  ) {
-		return typeof window.FormData === 'function';
+		return typeof window.FormData !== 'undefined';
 	};
 
 	this.on('submit', function(e) {
